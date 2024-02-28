@@ -12,26 +12,28 @@
     <div class="container d-flex justify-content-center mt-5">
       <div class="card" style="width: 80rem;">
 
+  <!--Encabezado-->      
         <div class="card-header">
           <h1><strong>Payment from example</strong></h1>
         </div>
-
+  <!--Cuerpo-->
         <div class="card-body">
+    <!--Alerta roja-->
           <div class="red-paragraph" style=" border: 1px solid #F6CBCF; background: #F8D7DA; color: #B77D82; padding: 10px 10px 0 10px; margin-bottom: 10px;">
             <p><strong>Some fields are missing</strong></p>
           </div>
-
+    <!--Fila 1: Card#, CVV y Amount-->
           <div class="row">
             <div class="col-sm-4">
               <div class="mb-3">
                 <label for="numero-tarjeta-credito" class="form-label"><strong>Card #</strong></label>
-                <input type="number" class="form-control" id="card" placeholder="XXXXXXXXXXXXXXXXXXX" max="999999999999" required>
+                <input type="text" class="form-control" name="Card" placeholder="XXXXXXXXXXXX" inputmode="numeric" pattern="[0-9]{16}" required>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="mb-3">
                 <label for="cvc" class="form-label"><strong>CVC #</strong></label>
-                <input type="number" class="form-control" id="cvc" placeholder="0000" max="9999" requiredrequired>
+                <input type="text" name="CVC" placeholder="0000" class="form-control" inputmode="numeric" pattern="[0-9]{4}" required>
               </div>
             </div>
             <div class="col-sm-4">
@@ -39,38 +41,38 @@
                 <label for="amount" class="form-label"><strong>Amount</strong></label>
                 <div class="input-group">
                   <strong>$</strong>
-                  <input type="number" class="form-control" id="amount" placeholder="Amount" max="999" required>
+                  <input type="text" name="Amount" placeholder="$ Amount" class="form-control" inputmode="numeric" pattern="[0-9]*" required>
                 </div>
               </div>
             </div>
           </div>
-        
+    <!--Fila 2: First name y Last name-->
           <div class="row">
             <div class="col-sm-6">
               <div class="mb-3">
                 <label for="first-name" class="form-label"><strong>First name</strong></label>
-                <input type="text" class="form-control" id="first-name" pattern="[A-Za-z]+ required ">
+                <input type="text" class="form-control" id="first-name" required>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="mb-3">
                 <label for="last-name" class="form-label"><strong>Last name</strong></label>
-                <input type="text" class="form-control" id="last-name" required >
+                <input type="text" class="form-control" id="last-name" required>
               </div>
             </div>
           </div>
-          
+    <!--Fila 3: City, State, Postal code-->     
           <div class="row">
             <div class="col-sm-6">
               <div class="mb-3">
                 <label for="city" class="form-label"><strong>City</strong></label>
-                <input type="text" class="form-control" id="city">
+                <input type="text" class="form-control" id="city" required>
               </div>
             </div>
             <div class="col-sm-3">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label"><strong>State</strong></label>
-                <select type="text" class="form-select" id="state">
+                <select type="text" class="form-select" id="state" required>
                   <option value="" selected>Pick a state</option>
                   <option value="Colombia">Colombia</option>
                   <option value="Colombia">Peru</option>
@@ -82,11 +84,11 @@
             <div class="col-sm-3">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label"><strong>Postal code</strong></label>
-                <input type="number" class="form-control" id="postal-code" max="99999" required>
+                <input type="number" class="form-control" id="postal-code" required>
               </div>
             </div>
           </div>
-          
+    <!--Fila 4: We accept y message-->       
           <div class="row">
             <div class="col-sm-6">
               <div class="mb-3">
@@ -108,13 +110,13 @@
             <div class="col-sm-6">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label" style="margin-left: auto;"><strong>Message</strong>
-                  <textarea type="text" class="form-control" id="postal-code" rows="4" cols="80"></textarea>
+                  <textarea type="text" class="form-control" id="postal-code" rows="4" cols="80" required></textarea>
                   <p class="message" style="color: #6C757D;">Add any notes here.</p>
                 </label>
               </div>
             </div> 
           </div>
-          
+  <!--Footer-->      
           <div class="card-footer" style="background-color: #F7F7F7;">
             <div class="d-flex justify-content-end" style="margin: 10px;">
               <button type="button" class="btn btn-primary btn-sm" style="margin-right: 5px;">Cancel</button>
